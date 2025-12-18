@@ -23,7 +23,7 @@ def update(frame):
     
     ax_pos.clear()
     ax_pos.plot(positions, 'b-', linewidth=2)
-    ax_pos.plot(obj.position, 0, 'ro', markersize=15, label=f'x: {obj.position:.2f}')
+    ax_pos.plot(len(positions)-1, obj.position, 'ro', markersize=15, label=f'x: {obj.position:.2f}')
     ax_pos.set_title('X Position'); ax_pos.grid(True)
     ax_pos.legend()
     
