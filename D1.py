@@ -1,6 +1,6 @@
 
 
-class PhysicsObject:
+class PhysicsObject1D:
     def __init__(self, mass=1.0, position=0,
                  velocity=0,
                  acceleration=0,
