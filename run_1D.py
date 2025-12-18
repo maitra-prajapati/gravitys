@@ -19,7 +19,7 @@ for t in np.arange(0, total_time, dt):
     time_history.append(t)
     height_history.append(obj.y)
 
-    if(t>=time) obj.reset_forces
+    if(t>=time): obj.reset_forces
     obj.update(dt)
 
 # --- Visualization ---
