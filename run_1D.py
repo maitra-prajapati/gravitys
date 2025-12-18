@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from 1D import PhysicsObject1D
+from D1 import PhysicsObject1D
 m = float(input("Enter mass of object (kg): "))
 x_start = float(input("Enter initial height (m): "))
 force = float(input("enter a constant force value(Newton): "))
