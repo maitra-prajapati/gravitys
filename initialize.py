@@ -10,14 +10,14 @@ class PhysicsObject:
                  net_force=np.array([0.0, 0.0]), 
                  net_torque=0.0):
         self.mass = mass
-        self.position = position
-        self.velocity = velocity
-        self.acceleration = acceleration
+        self.position = np.array(position if position is not None else [0.0, 0.0], dtype = float)
+        self.velocity = np.array(velocity if velocity is not None else [0.0, 0.0], dtype = float)
+        self.acceleration = np.array(acceleration if acceleration is not None else [0.0, 0.0], dtype = float)
         self.gravity = gravity
-        self.angular_velocity = angular_velocity
-        self.angular_acceleration = angular_acceleration
-        self.net_force = net_force
-        self.net_torque = net_torque  # Scalar for 2D rotation around z-axis
+        self.angular_velocity = np.array(angular_velocity if angular_velocity is not None else [0.0, 0.0], dtype = float)
+        self.angular_acceleration =np.array(angular_acceleration if angular_acceleration is not None else [0.0, 0.0], dtype = float)
+        self.net_force = np.array(net_force if net_force is not None else [0.0, 0.0], dtype = float)
+        self.net_torque =np.array(net_torque if net_torque is not None else [0.0, 0.0], dtype = float) # Scalar for 2D rotation around z-axis
     
     def update_linear(self, dt):
         """Euler integration: v += a*dt, x += v*dt"""
