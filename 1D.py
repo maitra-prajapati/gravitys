@@ -1,6 +1,6 @@
 import numpy as np
 
-class PhysicsObject:
+class PhysicsObject1D:
   def __init__(self, mass=1.0, position=np.array([0.0, 0.0]), 
                  velocity=np.array([0.0, 0.0]),
                  acceleration=np.array([0.0, 0.0])):
